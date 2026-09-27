@@ -1,0 +1,10 @@
+One-click links (open them in the browser):
+
+Speaker details, clean document style:
+https://app.allback.ai/new?title=Speaker+details&style=paper&due=2026-10-09&f=text~Full+name!&f=email~Email!&f=long~Short+bio!&f=file~Headshot!&f=choice~Diet~None,Vegetarian,Vegan
+
+One question at a time:
+https://app.allback.ai/new?title=Quick+feedback&style=focus&f=nps~How+likely+are+you+to+recommend+us%3F!&f=long~What+should+we+improve%3F
+
+A broken link (shows the "fix the link" page):
+https://app.allback.ai/new?title=Broken&f=dropdown~Diet~A,B

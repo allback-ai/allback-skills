@@ -1,0 +1,13 @@
+{
+  "title": "Team dinner RSVP",
+  "theme": { "preset": "sunrise" },
+  "pages": [
+    { "id": "p1", "blocks": [{ "id": "coming", "type": "yes_no", "label": "Are you coming?", "required": true }], "next": [{ "if": { "field": "coming", "op": "eq", "value": false }, "to": "end:no" }] },
+    { "id": "p2", "blocks": [
+      { "id": "main", "type": "choice", "label": "Main course", "options": ["Fish", "Veggie curry", "Steak"], "required": true },
+      { "id": "plus_one", "type": "yes_no", "label": "Bringing someone?" },
+      { "id": "plus_one_name", "type": "short_text", "label": "Their name", "showIf": { "field": "plus_one", "op": "eq", "value": true } }
+    ] }
+  ],
+  "endings": [{ "id": "no", "title": "We will miss you!" }, { "id": "yes", "title": "See you there, {{recipient.first_name}}!" }]
+}

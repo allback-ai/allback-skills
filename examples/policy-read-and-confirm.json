@@ -1,0 +1,9 @@
+{
+  "title": "New travel policy: please read and sign",
+  "theme": { "preset": "forest" },
+  "blocks": [
+    { "type": "document", "id": "doc_policy", "title": "Travel policy 2026", "required": true, "body": "# Booking\n- Book 14 days ahead.\n- Economy under 6 hours.\n## Expenses\n1. Photo of each receipt.\n2. Submit within 30 days." },
+    { "id": "accept", "type": "consent", "label": "Confirmation", "text": "I have read the travel policy and I will follow it.", "required": true },
+    { "id": "signature", "type": "signature", "label": "Your signature", "required": true }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Hackathon teams",
+  "blocks": [
+    { "id": "full_name", "type": "short_text", "label": "Name", "required": true },
+    { "id": "team", "type": "choice", "label": "Team", "options": ["Rockets", "Owls", "Foxes"], "required": true }
+  ],
+  "custom": {
+    "css": "body{font-family:ui-rounded,system-ui;background:radial-gradient(circle at 20% 20%,#6d28d9,#0f172a 60%);color:#fff;min-height:100vh;display:grid;place-items:center}.card{width:min(560px,92vw);padding:36px;border-radius:28px;background:rgba(255,255,255,.08);box-shadow:0 30px 80px -20px #000}h1{font-size:38px;margin:0 0 6px}p{opacity:.8;margin:0 0 22px}input{width:100%;box-sizing:border-box;padding:14px 16px;border-radius:14px;border:0;font-size:17px;margin-bottom:18px}.teams{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}.team{padding:18px 8px;border-radius:18px;border:2px solid rgba(255,255,255,.2);background:transparent;color:#fff;font-size:30px;cursor:pointer}.team span{display:block;font-size:14px;margin-top:6px}.team.on{border-color:#facc15;background:rgba(250,204,21,.15)}button.go{width:100%;padding:16px;border:0;border-radius:16px;background:linear-gradient(90deg,#facc15,#fb7185);font-size:18px;font-weight:800;cursor:pointer}",
+    "html": "<div class=\"card\"><h1>Pick your crew 🚀</h1><p>Build Weekend 2026 · choose a team and we save your spot.</p><input id=\"nm\" placeholder=\"Your name\"><div class=\"teams\"><button class=\"team\" data-t=\"Rockets\">🚀<span>Rockets</span></button><button class=\"team\" data-t=\"Owls\">🦉<span>Owls</span></button><button class=\"team\" data-t=\"Foxes\">🦊<span>Foxes</span></button></div><button class=\"go\" id=\"go\">Lock it in</button><p id=\"out\" style=\"margin-top:14px\"></p></div>",
+    "js": "allback.ready(({answers}) => { nm.value = answers.full_name || ''; }); document.querySelectorAll('.team').forEach((b) => b.onclick = () => { document.querySelectorAll('.team').forEach((x) => x.classList.remove('on')); b.classList.add('on'); allback.set('team', b.dataset.t); }); go.onclick = async () => { await allback.set('full_name', nm.value); const r = await allback.submit(); out.textContent = r.ok ? '✓ ' + r.ending.title : Object.values(r.errors).join(' '); };"
+  }
+}

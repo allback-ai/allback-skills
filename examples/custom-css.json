@@ -1,0 +1,10 @@
+{
+  "title": "Client onboarding",
+  "theme": { "preset": "paper" },
+  "blocks": [
+    { "id": "company", "type": "short_text", "label": "Company", "required": true },
+    { "id": "logo", "type": "file", "label": "Your logo", "accept": ["image/*"] },
+    { "id": "brand_color", "type": "short_text", "label": "Brand colour (hex)" }
+  ],
+  "custom": { "css": ".ab-h1{letter-spacing:-.04em;text-transform:uppercase}.ab-btn{border-radius:0!important;background:#ff0080!important;color:#fff!important}.ab-input{border-radius:0!important;border:2px solid #111!important}" }
+}
